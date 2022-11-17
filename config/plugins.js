@@ -3,8 +3,8 @@ module.exports = ({ env }) => ({
       config: {
         provider: 'aws-s3',
         providerOptions: {
-          accessKeyId: env('AKIA5SWMQNJYBIVO5AWI'),
-          secretAccessKey: env('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'),
+          accessKeyId: env(''),
+          secretAccessKey: env(''),
           region: env('eu-central-1'),
           params: {
               Bucket: env('enjoye-strapi-images'),
