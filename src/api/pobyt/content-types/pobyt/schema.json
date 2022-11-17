@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pobyty",
+  "info": {
+    "singularName": "pobyt",
+    "pluralName": "pobyty",
+    "displayName": "Pobyt",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nazev_pobytu": {
+      "type": "string"
+    },
+    "hotel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hotel.hotel"
+    },
+    "aktivni": {
+      "type": "boolean"
+    },
+    "moznost_objednat": {
+      "type": "boolean"
+    },
+    "moznost_darovat": {
+      "type": "boolean"
+    },
+    "objednavky_od": {
+      "type": "datetime"
+    },
+    "cena": {
+      "type": "decimal"
+    },
+    "kategorie": {
+      "type": "customField",
+      "options": [
+        "TOP wellness pobyty",
+        "Romantické pobyty",
+        "Levné pobyty",
+        "Vánoční pobyty",
+        "Silvestrovské pobyty",
+        "Pobyty v přírodě",
+        "Pobyty pro zdravotníky",
+        "Podzimní pobyty",
+        "Valentýnské pobyty",
+        "Velikonoční pobyty",
+        "Relaxační pobyty",
+        "Spa a lázeňské pobyty",
+        "Pobyty pro ženy",
+        "Víkendové pobyty",
+        "Pivní lázně",
+        "Pobyty s vínem",
+        "Gurmánské pobyty",
+        "Wellness pobyty",
+        "Pobyty pro seniory",
+        "Sportovní pobyty",
+        "Pobyty na zámku",
+        "Pobyty na horách",
+        "Rodinné pobyty",
+        "Vánoční Dárkové poukazy",
+        "Léto wellness"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "fotky": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fotky.fotky"
+    },
+    "lokalita": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "customField",
+      "options": {
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

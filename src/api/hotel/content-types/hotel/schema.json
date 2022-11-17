@@ -1,0 +1,215 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotely",
+  "info": {
+    "singularName": "hotel",
+    "pluralName": "hotely",
+    "displayName": "Hotel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nazev_hotelu": {
+      "type": "string"
+    },
+    "typ_objektu": {
+      "type": "enumeration",
+      "enum": [
+        "Apartmá",
+        "Chalupa",
+        "Chata",
+        "Hostel",
+        "Hotel",
+        "Hotel * (1)",
+        "Hotel ** (2)",
+        "Hotel ***(3)",
+        "Hotel **** (4)",
+        "Hotel ***** (5)",
+        "Kemp",
+        "Lázně",
+        "Motel",
+        "Penzion",
+        "Zámek"
+      ]
+    },
+    "stat": {
+      "type": "enumeration",
+      "enum": [
+        "Belgie",
+        "Bělorusko",
+        "Bosna a Hercegovina",
+        "Bulharsko",
+        "Černá Hora",
+        "Česká republika",
+        "Chorvatsko",
+        "Dánsko",
+        "Finsko",
+        "Francie",
+        "Irsko",
+        "Island",
+        "Itálie",
+        "Lotyšsko",
+        "Lucembursko",
+        "Maďarsko",
+        "Malta",
+        "Německo",
+        "Nizozemsko",
+        "Norsko",
+        "Polsko",
+        "Portugalsko",
+        "Rakousko",
+        "Řecko",
+        "Rumunsko",
+        "Rusko",
+        "Slovensko",
+        "Slovinsko",
+        "Španělsko",
+        "Srbsko",
+        "Švédsko",
+        "Švýcarsko",
+        "Ukrajina",
+        "Velká Británie"
+      ]
+    },
+    "PSC": {
+      "type": "biginteger"
+    },
+    "ulice": {
+      "type": "string"
+    },
+    "zemepisna_sirka": {
+      "type": "float"
+    },
+    "zemepisna_delka": {
+      "type": "float"
+    },
+    "email": {
+      "type": "email"
+    },
+    "Fotky": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fotky.fotky"
+    },
+    "vybaveni_pokoje": {
+      "type": "customField",
+      "options": [
+        "balkón",
+        "fén",
+        "klimatizace",
+        "koupelna se sprchou",
+        "koupelna s vanou",
+        "kuchyň",
+        "lednice",
+        "minibar",
+        "přístroj na přípravu čaje / kávy",
+        "telefon",
+        "trezor",
+        "TV",
+        "WiFi"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "sluzby_hotelu": {
+      "type": "customField",
+      "options": [
+        "bar",
+        "balneo",
+        "bezbariérový přístup",
+        "domácím mazlíčkům vstup povolen ",
+        "kadeřnické studio\t",
+        "kavárna",
+        "kosmetické studio",
+        "manikúra, pedikúra",
+        "parkoviště otevřené",
+        "parkoviště uzavřené",
+        "pokojová služba",
+        "praní a žehlení",
+        "recepce 24 hodin",
+        "restaurace",
+        "směnárna",
+        "terasa",
+        "úschovna cenných předmětů",
+        "WiFi"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "wellness": {
+      "type": "customField",
+      "options": [
+        "aquacentrum",
+        "bazén se slanou vodou",
+        "bazén venkovní",
+        "bazén vnitřní",
+        "finská sauna",
+        "infra sauna\t",
+        "koupele\t",
+        "masáže",
+        "pára",
+        "solárium",
+        "solná jeskyně",
+        "vířivka",
+        "wellness centrum"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "sportovni_moznosti": {
+      "type": "customField",
+      "options": [
+        "bowling",
+        "cyklotrasa",
+        "fitness",
+        "golf",
+        "golfový trenažér",
+        "jízda na koni",
+        "kulečník, billiard",
+        "kuželky",
+        "lyžařské vleky",
+        "minigolf",
+        "Nordic Walking hole",
+        "půjčovna kol",
+        "půjčovna lyží",
+        "ricochet",
+        "rybolov",
+        "sportovní hala",
+        "squash",
+        "stolní tenis",
+        "střelnice",
+        "tělocvična",
+        "tenisová hala",
+        "tenisový kurt",
+        "úschovna kol"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "vybaveni_pro_deti": {
+      "type": "customField",
+      "options": [
+        "brouzdaliště",
+        "dětská postýlka",
+        "dětské hřiště",
+        "dětský koutek",
+        "dětský koutek v restauraci",
+        "hlídání dětí",
+        "lyžařská škola"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "check_in": {
+      "type": "string"
+    },
+    "check_out": {
+      "type": "string"
+    },
+    "zakladni_popis": {
+      "type": "customField",
+      "options": {
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

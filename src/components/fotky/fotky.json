@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_fotky_fotkies",
+  "info": {
+    "displayName": "Fotky",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Nazev_fotky": {
+      "type": "string"
+    },
+    "fotka": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
